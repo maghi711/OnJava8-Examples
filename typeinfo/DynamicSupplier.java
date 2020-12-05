@@ -1,10 +1,9 @@
 // typeinfo/DynamicSupplier.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 import java.util.function.*;
 import java.util.stream.*;
-
 
 class CountedInteger {
   private static long counter;
@@ -18,11 +17,11 @@ public class DynamicSupplier<T> implements Supplier<T> {
   public DynamicSupplier(Class<T> type) {
     this.type = type;
   }
+  @SuppressWarnings("deprecation")
   public T get() {
     try {
       return type.newInstance();
-    } catch(InstantiationException |
-            IllegalAccessException e) {
+    } catch(Exception e) {
       throw new RuntimeException(e);
     }
   }

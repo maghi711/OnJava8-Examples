@@ -1,5 +1,5 @@
 // patterns/observer/ObservedFlower.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Demonstration of "Observer" pattern
@@ -7,6 +7,7 @@
 package patterns.observer;
 import java.util.*;
 
+@SuppressWarnings("deprecation")
 class Flower {
   private boolean isOpen;
   private boolean alreadyOpen;
@@ -46,6 +47,7 @@ class Flower {
   }
 }
 
+@SuppressWarnings("deprecation")
 class Bee {
   private String name;
   Bee(String nm)  { name = nm; }
@@ -61,6 +63,7 @@ class Bee {
   }
 }
 
+@SuppressWarnings("deprecation")
 class Hummingbird {
   private String name;
   Hummingbird(String nm) { name = nm; }

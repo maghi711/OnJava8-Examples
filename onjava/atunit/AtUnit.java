@@ -1,5 +1,5 @@
 // onjava/atunit/AtUnit.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // An annotation-based unit-test framework
@@ -162,8 +162,11 @@ public class AtUnit implements ProcessFiles.Strategy {
       }
     } else { // Use the no-arg constructor:
       try {
-        return testClass.newInstance();
+        return testClass
+          .getConstructor().newInstance();
       } catch(InstantiationException |
+              NoSuchMethodException |
+              InvocationTargetException |
               IllegalAccessException e) {
         throw new RuntimeException(
           "Couldn't create a test object. " +

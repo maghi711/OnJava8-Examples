@@ -1,10 +1,10 @@
 // annotations/AtUnitExample2.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Assertions and exceptions can be used in @Tests
 // {java onjava.atunit.AtUnit
-// build/classes/main/annotations/AtUnitExample2.class}
+// build/classes/java/main/annotations/AtUnitExample2.class}
 package annotations;
 import java.io.*;
 import onjava.atunit.*;

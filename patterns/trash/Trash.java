@@ -1,5 +1,5 @@
 // patterns/trash/Trash.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Base class for Trash recycling examples
@@ -70,7 +70,8 @@ public abstract class Trash {
             trashType.getConstructor(double.class);
           // Call the constructor to create a
           // new object:
-          return (T)ctor.newInstance(info.data);
+          return
+            (T)ctor.newInstance(info.data);
         } catch(Exception e) {
           throw new CannotCreateTrashException(e);
         }

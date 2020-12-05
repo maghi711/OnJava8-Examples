@@ -1,10 +1,10 @@
 // annotations/StackLStringTst.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Applying @Unit to generics
 // {java onjava.atunit.AtUnit
-// build/classes/main/annotations/StackLStringTst.class}
+// build/classes/java/main/annotations/StackLStringTst.class}
 package annotations;
 import onjava.atunit.*;
 import onjava.*;

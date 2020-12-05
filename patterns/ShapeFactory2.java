@@ -1,5 +1,5 @@
 // patterns/ShapeFactory2.java
-// (c)2017 MindView LLC: see Copyright.txt
+// (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 import java.util.*;
@@ -25,9 +25,7 @@ public class ShapeFactory2 implements FactoryMethod {
       return (Shape)factories
         .computeIfAbsent(id, ShapeFactory2::load)
         .newInstance();
-    } catch(InstantiationException |
-            IllegalAccessException |
-            InvocationTargetException e) {
+    } catch(Exception e) {
       throw new BadShapeCreation(id);
     }
   }
